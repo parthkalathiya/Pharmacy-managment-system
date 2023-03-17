@@ -1,0 +1,36 @@
+{% extends 'seller-header.html' %}
+{% load static %}
+
+{% block content %}
+<div class="tables">
+    <div class="panel-body widget-shadow">
+        <h4>Product List</h4>
+        <table class="table">
+            <tr>
+                <th>Employee Name</th>
+                <td>{{productitem.name}}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{productitem.des}}</td>
+            </tr>
+            <tr>
+                <th>price</th>
+                <td>{{productitem.price}}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{productitem.quantity}}</td>
+            </tr>
+            <tr>
+                <th>Discount</th>
+                <td>{{productitem.discount}}</td>
+            </tr>
+        </table>
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-danger" value="Delete">
+        </form>
+    </div>
+</div>
+{% endblock %}

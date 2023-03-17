@@ -1,0 +1,58 @@
+{% extends 'seller-header.html' %}
+{% load static %}
+
+{% block content %}
+<div class="forms">
+    <h2 class="title1">Edit Product</h2>
+    <div class="row">
+        <div class="form-three widget-shadow">
+            <form class="form-horizontal" method="post"> 
+                {% csrf_token %}               
+                <div class="form-group">
+                    <label for="focusedinput" class="col-sm-2 control-label">Product Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control1" id="focusedinput" name="pname" value="{{productitem.name}}" placeholder="Default Input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="focusedinput" class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control1" id="focusedinput" name="desc" value="{{productitem.des}}" placeholder="Default Input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="focusedinput" class="col-sm-2 control-label">Product Price</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control1" id="focusedinput" name="price"  value="{{productitem.price}}" placeholder="Default Input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="focusedinput" class="col-sm-2 control-label">Quantity</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control1" id="focusedinput" name="quantity" value="{{productitem.quantity}}" placeholder="Default Input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="focusedinput" class="col-sm-2 control-label">Discount</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control1" id="focusedinput" name="discount" value="{{productitem.discount}}" placeholder="Default Input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="focusedinput" class="col-sm-2 control-label">Product Image</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control1" id="focusedinput" name="img" value="{{productitem.pic}}" placeholder="Default Input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-8">
+                        <input type="submit" class="btn btn-info" value="Update">
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
